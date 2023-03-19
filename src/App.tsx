@@ -1,9 +1,17 @@
+import { Home, AboutMe, Project } from './app/views';
+import { BrowserRouter, Routes, Route } from './app/vendor';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <p>hi</p>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about-me" element={<AboutMe />} />
+          <Route path="/project" element={<Project />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
