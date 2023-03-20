@@ -2,4 +2,14 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  height: 100vh;
+}
+
+#root, .App {
+  height: 100%;
+}
+
+*,*:before,*:after  {
+  box-sizing: border-box;
 }

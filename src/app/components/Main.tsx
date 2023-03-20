@@ -15,6 +15,7 @@ const MainContainer: FC<IProps> = (props) => {
 };
 
 const Main = styled(MainContainer)`
+  height: calc(100vh - 100px);
   border: 1px solid yellow;
 `
 

@@ -1,4 +1,6 @@
 import { Footer, Header, Main } from "../components";
+import { Grid } from "../compositionals/Grid";
+import { colors } from "../settings/colors";
 import { FC, styled } from "../vendor";
 
 interface IProps {
@@ -10,15 +12,19 @@ const ViewTemplateContainer: FC<IProps> = (props) => {
   const { className, children } = props;
   return (
     <div {...{ className }}>
-      <Header />
-      <Main>{children}</Main>
-      <Footer />
+      <Grid>
+        <Header />
+        <Main>{children}</Main>
+        <Footer />
+      </Grid>
     </div>
   );
 };
 
 const ViewTemplate = styled(ViewTemplateContainer)`
-  border: 1px solid yellow;
+  height: 100%;
+  background: ${colors.black};
+  color: ${colors.white};
 `
 
 export { ViewTemplate } ;

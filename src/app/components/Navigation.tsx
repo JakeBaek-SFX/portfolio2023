@@ -1,3 +1,4 @@
+import { colors } from "../settings/colors";
 import { FC, NavLink, styled } from "../vendor";
 
 interface IProps {
@@ -19,6 +20,16 @@ const NavigationContainer: FC<IProps> = (props) => {
 
 const Navigation = styled(NavigationContainer)`
   border: 1px solid yellow;
+
+  ul {
+    display: flex;
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: ${colors.white};
+  }
 `
 
 export { Navigation } ;
