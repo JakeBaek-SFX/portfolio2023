@@ -10,14 +10,23 @@ const HeaderContainer: FC<IProps> = (props) => {
   const { className } = props;
   return (
     <div {...{ className }}>
-      <div>LOGO</div>
+      <LogoWrapper><span>JAKE BAEK</span></LogoWrapper>
       <Navigation />
     </div>
   );
 };
 
+const LogoWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 30px;
+`
+
 const Header = styled(HeaderContainer)`
   display: flex;
+  justify-content: space-between;
   height: 50px;
   border: 1px solid red
 `

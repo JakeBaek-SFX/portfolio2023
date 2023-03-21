@@ -19,7 +19,7 @@ const Home: FC<IProps> = (props) => {
 
 const Title = styled.div`
   font-size: 50px;
-  font-weight: 600;
+  font-weight: 500;
 `
 
 export { Home } ;
