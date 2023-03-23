@@ -15,7 +15,7 @@ const FooterContainer: FC<IProps> = (props) => {
 
 const Footer = styled(FooterContainer)`
   height: 50px;
-  border: 1px solid blue;
+
 `
 
 export { Footer } ;

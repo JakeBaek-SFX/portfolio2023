@@ -14,7 +14,7 @@ const CardContainer: FC<IProps> = (props) => {
 };
 
 const Card = styled(CardContainer)`
-  border: 1px solid yellow;
+
 `
 
 export { Card } ;

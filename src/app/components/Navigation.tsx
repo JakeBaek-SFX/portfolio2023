@@ -19,7 +19,6 @@ const NavigationContainer: FC<IProps> = (props) => {
 };
 
 const Navigation = styled(NavigationContainer)`
-  border: 1px solid yellow;
   display: flex;
   align-item: center;
   font-size: 20px;
@@ -42,7 +41,7 @@ const Navigation = styled(NavigationContainer)`
 
   a {
     text-decoration: none;
-    color: ${colors.white};
+    color: ${colors.black};
   }
 `
 

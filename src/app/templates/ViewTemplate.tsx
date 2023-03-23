@@ -23,8 +23,8 @@ const ViewTemplateContainer: FC<IProps> = (props) => {
 
 const ViewTemplate = styled(ViewTemplateContainer)`
   height: 100%;
-  background: ${colors.black};
-  color: ${colors.white};
+  background: ${colors.white};
+  color: ${colors.black};
 `
 
 export { ViewTemplate } ;

@@ -28,7 +28,6 @@ const Header = styled(HeaderContainer)`
   display: flex;
   justify-content: space-between;
   height: 50px;
-  border: 1px solid red
 `
 
 export { Header };

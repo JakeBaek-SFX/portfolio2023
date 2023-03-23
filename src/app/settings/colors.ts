@@ -1,9 +1,9 @@
 const colors = {
-  black: '#293241',
-  white: '#FFFFFF',
-  blue: '#3d5a80',
-  lightBlue: '#98c1d9',
-  orange: '#ee6c4d'
+  black: '#000000',
+  white: '#F6F1F1',
+  blue: '#146C94',
+  lightBlue: '#19A7CE',
+  purple: '#AA77FF'
 };
 
 export { colors };
