@@ -1,4 +1,3 @@
-import { colors } from '../settings/colors';
 import { styled, FC } from '../vendor';
 import { Navigation } from './Navigation';
 

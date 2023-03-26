@@ -10,6 +10,8 @@ interface IProps {
 
 const ViewTemplateContainer: FC<IProps> = (props) => {
   const { className, children } = props;
+  console.log('children', children);
+  
   return (
     <div {...{ className }}>
       <Grid>
@@ -23,7 +25,7 @@ const ViewTemplateContainer: FC<IProps> = (props) => {
 
 const ViewTemplate = styled(ViewTemplateContainer)`
   height: 100%;
-  background: ${colors.white};
+  background: ${colors.pink};
   color: ${colors.black};
 `
 

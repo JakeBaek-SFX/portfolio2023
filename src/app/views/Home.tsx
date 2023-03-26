@@ -1,6 +1,6 @@
 import { colors } from "../settings/colors";
 import { ViewTemplate } from "../templates";
-import { FC, styled } from "../vendor";
+import { FC, NavLink, styled } from "../vendor";
 
 interface IProps {
 
@@ -17,7 +17,7 @@ const Home: FC<IProps> = (props) => {
           <p>I am a front end web developer.</p>
         </Title>
         <ButtonWrapper>
-          <a>View Projects</a>
+          <NavLink to='/project'><span>View Projects</span></NavLink>
         </ButtonWrapper>
       </ContentWrapper>
     </ViewTemplate>
@@ -47,6 +47,12 @@ const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  a {
+    padding: 10px 40px;
+    text-decoration: none;
+    color: ${colors.black};
+  }
 `
 
 const ContentWrapper = styled.div`
