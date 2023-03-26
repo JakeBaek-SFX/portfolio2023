@@ -4,6 +4,12 @@ import "react-multi-carousel/lib/styles.css";
 import { Card } from "../components";
 import { media } from "k2-media";
 
+const project1 = require('../../images/centennial-home.png');
+const project2 = require('../../images/copay-home.png');
+const project3 = require('../../images/epay-admin-home.png');
+const project4 = require('../../images/epay-public-home.png');
+const project5 = require('../../images/myrx-home.png');
+
 interface IProps {
 
 }
@@ -32,10 +38,11 @@ const Project: FC<IProps> = (props) => {
     <ViewTemplate>
       <ContentWrapper>
         <Carousel responsive={responsive}>
-          <Card title="title1" description="desc1"/>
-          <Card title="title2" description="desc2"/>
-          <Card title="title3" description="desc3"/>
-          <Card title="title4" description="desc4"/>
+          <Card src={project1} title="title1" description="desc1"/>
+          <Card src={project2} title="title2" description="desc2"/>
+          <Card src={project3} title="title3" description="desc3"/>
+          <Card src={project4} title="title4" description="desc4"/>
+          <Card src={project5} title="title4" description="desc4"/>
         </Carousel>
       </ContentWrapper>
     </ViewTemplate>
