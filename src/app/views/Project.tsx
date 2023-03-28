@@ -56,7 +56,12 @@ const ContentWrapper = styled.div`
     width: 500px;
   }
 
+  ul {
+    padding: 20px 0;
+  }
+
   li {
+    padding: 0 20px;
     display: flex;
     justify-content: center;
     aligh-items: center;

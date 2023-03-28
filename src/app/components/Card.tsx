@@ -20,6 +20,13 @@ const CardContainer: FC<IProps> = (props) => {
 };
 
 const Card = styled(CardContainer)`
+  transition: all .2s ease-in-out;
+  
+  &: hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
   display: flex;
   justify-content: center;
   align-items: center;
