@@ -1,4 +1,5 @@
 import { FC, styled } from "../vendor";
+import { Grid } from '../compositionals/Grid';
 
 interface IProps {
   className?: string;
@@ -9,7 +10,9 @@ const MainContainer: FC<IProps> = (props) => {
   const { className, children } = props;
   return (
     <div {...{ className }}>
-      {children}
+      <Grid>
+        {children}
+      </Grid>
     </div>
   );
 };

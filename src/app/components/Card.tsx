@@ -6,20 +6,31 @@ interface IProps {
   title: string;
   description: string;
   src: string;
+  skills: string;
 }
 
 const CardContainer: FC<IProps> = (props) => {
-  const { className, title, description, src } = props;
+  const { className, title, description, src, skills } = props;
   return (
     <div {...{ className }}>
       <img src={src} />
-      <p>{title}</p>
-      <p>{description}</p>
+      <Contents>
+        <p>{title}</p>
+        <p>{description}</p>
+        <p>{skills}</p>
+      </Contents>
     </div>
   );
 };
 
+const Contents = styled.div`  
+  margin-top: 30px;
+
+
+`
+
 const Card = styled(CardContainer)`
+  padding: 20px;
   transition: all .2s ease-in-out;
   
   &: hover {
@@ -28,11 +39,10 @@ const Card = styled(CardContainer)`
   }
 
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 300px;
-  height: 400px;
+  width: 350px;
+  height: 450px;
   background: ${colors.white};
   border-radius: 10px;
 
