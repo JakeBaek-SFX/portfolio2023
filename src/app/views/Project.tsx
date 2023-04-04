@@ -86,7 +86,7 @@ const ContentWrapper = styled.div`
   }
 
   li {
-    padding: 0 20px;
+    padding: 0 15px;
     display: flex;
     justify-content: center;
     aligh-items: center;

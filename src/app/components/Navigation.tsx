@@ -10,9 +10,9 @@ const NavigationContainer: FC<IProps> = (props) => {
   return (
     <div {...{ className }}>
       <ul>
-        <li><NavLink to='/'><span>Home</span></NavLink></li>
-        <li><NavLink to='/about-me'><span>AboutMe</span></NavLink></li>
-        <li><NavLink to='/project'><span>Project</span></NavLink></li>
+        <li><NavLink to='/'>Home</NavLink></li>
+        <li><NavLink to='/about-me'>AboutMe</NavLink></li>
+        <li><NavLink to='/project'>Project</NavLink></li>
       </ul>
     </div>
   );
@@ -20,26 +20,25 @@ const NavigationContainer: FC<IProps> = (props) => {
 
 const Navigation = styled(NavigationContainer)`
   display: flex;
-  align-item: center;
+  align-items: center;
   font-size: 20px;
 
   ul, li, a {    
     display: flex;
-    align-item: center;
   }
 
   ul {
     justify-content: space-between;
     list-style-type: none;
-    padding: 10px 20px;
     margin: 0;
   }
 
   li {
-    margin-left: 50px;
+    flex-grow: 1;
   }
 
   a {
+    padding-left: 50px;
     text-decoration: none;
     color: ${colors.black};
   }

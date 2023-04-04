@@ -5,7 +5,8 @@ const colors = {
   blue: '#146C94',
   lightBlue: '#19A7CE',
   purple: '#AA77FF',
-  grey: '#4D455D'
+  grey: '#4D455D',
+  lightGrey: '#F0EEED'
 };
 
 export { colors };

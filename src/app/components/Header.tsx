@@ -29,7 +29,7 @@ const LogoWrapper = styled.div`
 const GridWrapper = styled(Grid)`
   display: flex;
   justify-content: space-between;
-  height: 50px;
+  height: 75px;
 `
 
 const Header = styled(HeaderContainer)`
