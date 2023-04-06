@@ -1,5 +1,5 @@
 import { colors } from "../settings/colors";
-import { FC, styled } from "../vendor";
+import { FC, Link, styled } from "../vendor";
 
 interface IProps {
   className?: string;
@@ -11,9 +11,10 @@ interface IProps {
 
 const CardContainer: FC<IProps> = (props) => {
   const { className, title, description, src, skills } = props;
+
   return (
-    <div {...{ className }}>
-      <img src={src} />
+    <Link {...{ className }} to={`/project-details/${title}`}>
+      <img src={src} alt={description}/>
       <Contents>
         <div>
           <Title>{title}</Title>
@@ -21,7 +22,7 @@ const CardContainer: FC<IProps> = (props) => {
         </div>
         <Skills>-{skills}</Skills>
       </Contents>
-    </div>
+    </Link>
   );
 };
 
@@ -47,6 +48,8 @@ const Contents = styled.div`
 ` 
 
 const Card = styled(CardContainer)`
+  color: ${colors.black};
+  text-decoration: none;
   padding: 20px;
   transition: all .2s ease-in-out;
   box-shadow: 0 3px 3px 3px ${colors.lightGrey};

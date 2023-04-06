@@ -62,7 +62,7 @@ const Project: FC<IProps> = (props) => {
             description="A responsive web application that allows users(pharmacists and patients) to submit claims, check claim history, and download reports."
             skills="React, TypeScript, Storybook, Styled-component, RESTful API            "
           />
-          <Card 
+          <Card
             src={project5}
             title="Patient Enrolment Web App" 
             description="A responsive web application that provides users (patients and healthcare providers) electronic pharmacy enrolment process navigation, health care resources and support."
