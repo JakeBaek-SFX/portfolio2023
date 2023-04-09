@@ -2,7 +2,9 @@ import { ViewTemplate } from "../templates";
 import { FC } from "../vendor";
 import SimpleImageSlider from "react-simple-image-slider";
 import { useParams } from "react-router-dom";
-const project1 = require('../../images/centennial-home.png');
+import styled from "styled-components";
+import { colors } from "../settings/colors";
+const project1 = require('../../images/cent_1.png');
 const project2 = require('../../images/copay-home.png');
 const project3 = require('../../images/epay-admin-home.png');
 const project4 = require('../../images/epay-public-home.png');
@@ -26,15 +28,26 @@ const ProjectDetails: FC<IProps> = (props) => {
   return (
     <ViewTemplate>
       <div>{project}</div>
-      <SimpleImageSlider
-        width={896}
-        height={504}
-        images={images}
-        showBullets={true}
-        showNavs={true}
-      />
+      <SlideWrapper>
+        <SimpleImageSlider
+          width={800}
+          height={400}
+          images={images}
+          showBullets={true}
+          showNavs={true}
+        />
+      </SlideWrapper>
     </ViewTemplate>
   );
 };
+
+const SlideWrapper = styled.div`
+  background: ${colors.white};
+  border-radius: 10px;
+  box-shadow: 0 3px 3px 3px #EAE0DA;
+  overflow: hidden;
+  border: 3px solid #e5e5e5;
+
+`
 
 export { ProjectDetails } ;

@@ -52,7 +52,7 @@ const Card = styled(CardContainer)`
   text-decoration: none;
   padding: 20px;
   transition: all .2s ease-in-out;
-  box-shadow: 0 3px 3px 3px ${colors.lightGrey};
+  box-shadow: 0 3px 3px 3px #EAE0DA;
 
   &: hover {
     cursor: pointer;
