@@ -1,5 +1,5 @@
 import { ViewTemplate } from "../templates";
-import { FC } from "../vendor";
+import { FC, media } from "../vendor";
 import SimpleImageSlider from "react-simple-image-slider";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
@@ -17,7 +17,7 @@ interface IProps {
 }
 
 const ProjectDetails: FC<IProps> = (props) => {
-  const { project } = useParams()
+  const { id } = useParams()
   
   const images = [
     { url: project1 },
@@ -28,6 +28,23 @@ const ProjectDetails: FC<IProps> = (props) => {
     { url: project6 },
     { url: project7 }
   ];
+
+  const projectDetails = {
+    '1': {
+      title: 'Centennial College Website',
+      desc: 'A responsive website that shares information about its programs, faculty, facilities, and events with students, faculty, staff, alumni, and the general public.',
+      link: '//centennialcollege.ca',
+      skills: 'React, TypeScript, Umbraco, Storybook, Styled-component, Jest',
+      keyPoints: 'design system(storybook), CMS(Umbraco), optimization(lazy loading using react-visibility-sensor - set images & iframes after it is visible, code splitting, defer script loading, a11y using Axe devTools), customized visual components'
+    },
+    '2': {
+      title: 'Centennial College Website',
+      desc: 'A responsive website that shares information about its programs, faculty, facilities, and events with students, faculty, staff, alumni, and the general public.',
+      link: '//centennialcollege.ca',
+      skills: 'React, TypeScript, Umbraco, Storybook, Styled-component, Jest',
+      keyPoints: 'design system(storybook), CMS(Umbraco), optimization(lazy loading using react-visibility-sensor - set images & iframes after it is visible, code splitting, defer script loading, a11y using Axe devTools), customized visual components'
+    },
+  }
 
   return (
     <ViewTemplate>
@@ -43,10 +60,18 @@ const ProjectDetails: FC<IProps> = (props) => {
         </SlideWrapper>
         <Description>
           <UpperWrapper>
-          {project}
+            <ul>
+              <li>{projectDetails[id].title}</li>
+              <li>{projectDetails[id].desc}</li>
+              <li>{projectDetails[id].link}</li>
+            </ul>
+            <Button href={projectDetails[id].link} target="_blank">View Website</Button>
           </UpperWrapper>
           <LowerWrapper>
-          {project}
+            <ul>
+              <li>{projectDetails[id].skills}</li>
+              <li>{projectDetails[id].keyPoints}</li>
+            </ul>
           </LowerWrapper>
         </Description>
       </ProjectDetailsWrapper>
@@ -54,41 +79,63 @@ const ProjectDetails: FC<IProps> = (props) => {
   );
 };
 
+const Button = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: ${colors.white};
+  background: ${colors.blue};
+  width: 120px;
+  height: 50px;
+`
+
 const UpperWrapper = styled.div`
+  height: 45%;
   background: ${colors.white};
   border-radius: 10px;
-  box-shadow: 0 3px 3px 3px #EAE0DA;
   overflow: hidden;
-  border: 3px solid #e5e5e5;
 `
 
 const LowerWrapper = styled.div`
+  height: 45%;
   background: ${colors.white};
   border-radius: 10px;
-  box-shadow: 0 3px 3px 3px #EAE0DA;
   overflow: hidden;
-  border: 3px solid #e5e5e5;
 `
 
 const Description = styled.div`
-  background: ${colors.white};
-  border-radius: 10px;
-  box-shadow: 0 3px 3px 3px #EAE0DA;
-  overflow: hidden;
-  border: 3px solid #e5e5e5;
-  margin-left: 50px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20px;
+
+  ${media.screenSm} {
+    width: 100%;
+  }
 `
 
 const SlideWrapper = styled.div`
+  width: 65%;
   background: ${colors.white};
   border-radius: 10px;
   box-shadow: 0 3px 3px 3px #EAE0DA;
   overflow: hidden;
   border: 3px solid #e5e5e5;
+
+  ${media.screenSm} {
+    width: 100%;
+  }
 `
 
 const ProjectDetailsWrapper = styled.div`
   display: flex;
+  justify-content: space-between;
+
+  ${media.screenSm} {
+    flex-direction: column;
+  }
 `
 
 export { ProjectDetails } ;

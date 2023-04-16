@@ -7,13 +7,14 @@ interface IProps {
   description: string;
   src: string;
   skills: string;
+  id: string;
 }
 
 const CardContainer: FC<IProps> = (props) => {
-  const { className, title, description, src, skills } = props;
+  const { className, title, description, src, skills, id } = props;
 
   return (
-    <Link {...{ className }} to={`/project-details/${title}`}>
+    <Link {...{ className }} to={`/project-details/${id}`}>
       <img src={src} alt={description}/>
       <Contents>
         <div>

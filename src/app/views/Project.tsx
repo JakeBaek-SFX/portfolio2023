@@ -40,30 +40,35 @@ const Project: FC<IProps> = (props) => {
         <Carousel responsive={responsive}>
           <Card 
             src={project1} 
+            id="1"
             title="Centennial College Website" 
             description="A responsive website that shares information about its programs, faculty, facilities, and events with students, faculty, staff, alumni, and the general public."
             skills="React, TypeScript, Umbraco, Storybook, Styled-component, Jest"
           />
           <Card
-            src={project2}             
+            src={project2}    
+            id="2"         
             title="Co-Pay Web App" 
             description="A web application that helps users to save expense on prescription drug coverage that requires them to pay a portion of the cost of the drug while the insurance company covers the remainder of the cost."
             skills="React, TypeScript, Storybook, Styled-component, GraphQL, RESTful API, Jest"
           />
           <Card
             src={project3} 
+            id="3"
             title="E-Pay admin Web App" 
             description="A responsive web application that allows administrators to manage their clients and drug programs."
             skills="C#, .NET, React, TypeScript, Storybook, Styled-component, RESTful API, Jest"
           />
           <Card 
             src={project4} 
+            id="4"
             title="E-Pay public Web App" 
             description="A responsive web application that allows users(pharmacists and patients) to submit claims, check claim history, and download reports."
             skills="React, TypeScript, Storybook, Styled-component, RESTful API            "
           />
           <Card
             src={project5}
+            id="5"
             title="Patient Enrolment Web App" 
             description="A responsive web application that provides users (patients and healthcare providers) electronic pharmacy enrolment process navigation, health care resources and support."
             skills="React, TypeScript, Storybook, Styled-component, RESTful API, Jest"
